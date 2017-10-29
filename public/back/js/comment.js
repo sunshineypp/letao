@@ -1,3 +1,10 @@
-/**
- * Created by Dell on 2017/10/29.
- */
+$(function () {
+    $(document).ajaxStart(function () {
+        //开启进度条
+        NProgress.start();
+    });
+    $(document).ajaxStop(function () {
+        //关闭进度条
+        NProgress.done();
+    });
+});
