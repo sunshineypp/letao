@@ -18,6 +18,7 @@ ul{
 }
 
 /*index页面*/
+/*左侧*/
 .lt_aside{
     width: 180px;
     height: 100%;
@@ -66,4 +67,19 @@ ul{
 }
 .lt_aside .nav .child a{
     padding-left: 50px;
+}
+/*首页内容区*/
+.lt_main{
+    padding-left: 180px;
+}
+.lt_main .lt_header{
+    height: 50px;
+    line-height: 50px;
+    background-color: #3c8dbc;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.lt_header a{
+    color: #fff;
+    font-size: 20px;
 }
