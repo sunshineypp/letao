@@ -18,5 +18,22 @@ $(function () {
     $('.icon_menu').on('click',function () {
         $('.lt_aside').toggleClass('now');
         $('.lt_main').toggleClass('now');
+    });
+
+    //4.退出功能
+    $('.icon_logout').on('click',function () {
+        $('#logoutModal').modal('show');
+    });
+    $('.btn_logout').on('click',function () {
+        //告诉后台要退出了
+        $.ajax({
+            type: 'get',
+            url: '/employee/employeeLogout',
+            success: function (data) {
+                if(data.success){
+                    window.location.href = "login.html";
+                }
+            }
+        });
     })
 });
