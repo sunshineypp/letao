@@ -9,8 +9,14 @@ $(function () {
         NProgress.done();
     });
 
-    //分类显示与隐藏
+    //2.分类显示与隐藏
         $('.child').prev().on('click',function () {
         $(this).next().slideToggle();
+    });
+    
+    //3.左侧移动
+    $('.icon_menu').on('click',function () {
+        $('.lt_aside').toggleClass('now');
+        $('.lt_main').toggleClass('now');
     })
 });
