@@ -91,3 +91,8 @@ ul{
     color: #fff;
     font-size: 20px;
 }
+.lt_content .pic_left,
+.lt_content .pic_right{
+    width: 45%;
+    height: 400px;
+}
