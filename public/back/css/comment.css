@@ -3,6 +3,9 @@
 .mt_150{
     margin-top: 150px;
 }
+.mb_15{
+    margin-bottom: 15px;
+}
 a:link, a:visited, a:hover, a:active{
     text-decoration: none;
 }
@@ -10,6 +13,10 @@ ul{
     padding: 0;
     margin: 0;
     list-style: none;
+}
+thead th,
+tbody td{
+    text-align: center;
 }
 
 /*登录界面*/
