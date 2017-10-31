@@ -29,7 +29,7 @@
             <span class="glyphicon glyphicon-list"></span>
             分类管理
           </a>
-          <div class="child" style="display: none">
+          <div class="child" style="display: block">
             <a href="first.html">一级分类</a>
             <a class="now" href="second.html">二级分类</a>
           </div>
@@ -62,11 +62,32 @@
         <li><a href="#">分类管理</a></li>
         <li class="active">二级分类</li>
       </ol>
+
+      <!--主内容区-->
+      <button class="btn_add btn btn-default mb_15">添加分类</button>
+
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th width="10%">序号</th>
+            <th width="30%">一级分类名称</th>
+            <th width="30%">二级分类名称</th>
+            <th width="30%">二级分类Logo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--挖个坑-->
+        </tbody>
+      </table>
+      <div class="text-right">
+        <ul id="paginator"></ul>
+      </div>
+
     </div>
   </div>
 
 
-  <!--模态框-->
+  <!--退出登录模态框-->
   <div class="modal fade in bs-example-modal-sm" tabindex="-1" id="logoutModal">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -89,9 +110,25 @@
     </div>
   </div>
 
+  <script type="text/html" id="tpl">
+    {{each rows v i}}
+    <tr>
+      <td>{{(page-1)*size+i+1}}</td>
+      <td>{{v.categoryName}}</td>
+      <td>{{v.brandName}}</td>
+      <td>
+        <img width="50" height="50" src="{{v.brandLogo}}" alt="">
+      </td>
+    </tr>
+    {{/each}}
+  </script>
+
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/nprogress/nprogress.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
   <script src="js/comment.js"></script>
+  <script src="js/second.js"></script>
 </body>
 </html>

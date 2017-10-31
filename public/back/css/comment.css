@@ -14,9 +14,10 @@ ul{
     margin: 0;
     list-style: none;
 }
-thead th,
-tbody td{
+.lt_main thead tr th,
+.lt_main tbody tr td{
     text-align: center;
+    vertical-align: middle;
 }
 
 /*登录界面*/
