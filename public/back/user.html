@@ -86,7 +86,7 @@
   </div>
 
 
-  <!--模态框-->
+  <!--退出模态框-->
   <div class="modal fade in bs-example-modal-sm" tabindex="-1" id="logoutModal">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -109,6 +109,29 @@
     </div>
   </div>
 
+  <!--切换按钮模态框-->
+  <div class="modal fade in bs-example-modal-sm" tabindex="-1" id="isDeleteModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p class="text-danger">
+            <span class="glyphicon glyphicon-info-sign"></span>
+            您确定要 禁用 itcast 这个用户吗？
+          </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary btn_delete">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!--模板引擎模板-->
   <script type="text/html" id="tpl">
@@ -118,7 +141,7 @@
       <td>{{v.username}}</td>
       <td>{{v.mobile}}</td>
       <td>{{v.isDelete===1?"正常":"禁用"}}</td>
-      <td>
+      <td data-id="{{v.id}}" data-is-delete="{{v.isDelete}}">
         {{if v.isDelete===1}}
         <button class="btn btn-sm btn-danger">禁用</button>
         {{/if}}
