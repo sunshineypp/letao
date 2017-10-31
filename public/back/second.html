@@ -5,6 +5,7 @@
   <title>乐淘管理系统-首页</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="stylesheet" href="css/comment.css">
 </head>
 <body>
@@ -110,6 +111,59 @@
     </div>
   </div>
 
+  <!--添加模态框-->
+  <div class="modal fade in bs-example-modal-sm" tabindex="-1" id="addModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">添加二级分类</h4>
+        </div>
+        <div class="modal-body">
+          <form id="form">
+            <div class="form-group">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <span class="dropdown_text">请选择一级分类</span>
+
+                  <!--不显示，用来传输数据-->
+                  <input type="hidden" name="categoryId" id="categoryId">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <!--挖个坑-->
+                </ul>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" id="brandName" name="brandName" placeholder="请输入二级分类名称">
+              <input type="text" class="form-control" id="hot" name="hot" placeholder="是否火热">
+            </div>
+
+            <div class="form-group">
+              <div class="fileupload_box">
+                <button class="btn btn-default">上传图片</button>
+                <input id="fileupload" type="file" name="pic1" class="btn btn-default" data-url="/category/addSecondCategoryPic">
+              </div>
+
+            </div>
+
+            <div class="form-group img_box">
+              <img src="images/none.png" width="100" height="100" alt="">
+              <input type="hidden" name="brandLogo" id="brandLogo">
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" form="form" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" form="form" class="btn btn-primary btn_confirm">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script type="text/html" id="tpl">
     {{each rows v i}}
     <tr>
@@ -117,17 +171,27 @@
       <td>{{v.categoryName}}</td>
       <td>{{v.brandName}}</td>
       <td>
-        <img width="50" height="50" src="{{v.brandLogo}}" alt="">
+        <img width="50" height="50" src="{{v.brandLogo?v.brandLogo:'images/none.png'}}" alt="">
       </td>
     </tr>
     {{/each}}
   </script>
+
+  <script type="text/html" id="tpl2">
+    {{each rows v i}}
+    <li><a href="javascript:;" data-id="{{v.id}}">{{v.categoryName}}</a></li>
+    {{/each}}
+  </script>
+
 
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/nprogress/nprogress.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>
   <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+  <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+  <script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+  <script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
   <script src="js/comment.js"></script>
   <script src="js/second.js"></script>
 </body>
