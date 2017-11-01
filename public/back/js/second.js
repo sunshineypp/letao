@@ -125,6 +125,9 @@ $(function () {
                     //重置表单
                     $form[0].reset();
                     $form.data('bootstrapValidator').resetForm();
+                    //手动把dropdown重置，把图片的地址重置
+                    $(".dropdown-text").text("请选择一级分类");
+                    $(".img_box img").attr("src", "images/none.png");
                 }
             }
         });
