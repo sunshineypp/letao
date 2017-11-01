@@ -1,0 +1,29 @@
+.lt_category_l{
+    width: 90px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.lt_category_l li{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #f3f4f5;
+}
+.lt_category_l li.now{
+    border-right: none;
+    background-color: #fff;
+}
+.lt_category_l li a{
+    color: #666;
+}
+
+/*右侧*/
+.lt_category_r{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: mediumpurple;
+}
