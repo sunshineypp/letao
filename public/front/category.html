@@ -30,24 +30,7 @@
       <div class="lt_category_l">
         <div class="mui-scroll-wrapper">
           <ul class="mui-scroll">
-            <li class="now">
-              <a href="javascript:;">运动馆</a>
-            </li>
-            <li>
-              <a href="javascript:;">运动馆</a>
-            </li>
-            <li>
-              <a href="javascript:;">运动馆</a>
-            </li>
-            <li>
-              <a href="javascript:;">运动馆</a>
-            </li>
-            <li>
-              <a href="javascript:;">运动馆</a>
-            </li>
-            <li>
-              <a href="javascript:;">运动馆</a>
-            </li>
+            <!--挖个坑-->
           </ul>
         </div>
       </div>
@@ -56,12 +39,7 @@
       <div class="lt_category_r">
         <div class="mui-scroll-wrapper">
           <ul class="mui-scroll">
-            <li>
-              <a href="javascript:;">
-                <img src="images/brand1.png" alt="">
-                <p>耐克</p>
-              </a>
-            </li>
+            <!--挖个坑-->
           </ul>
         </div>
       </div>
@@ -98,6 +76,33 @@
     </div>
   </div>
 
+  <!--左侧导航栏模板-->
+  <script type="text/html" id="tpl">
+    {{each rows v i}}
+    <li data-id="{{v.id}}" class="{{i==0?'now':''}}">
+      <a href="javascript:;">{{v.categoryName}}</a>
+    </li>
+    {{/each}}
+  </script>
+
+  <!--右侧模板-->
+  <script type="text/html" id="tpl2">
+    {{if rows.length == 0}}
+    <p class="info">暂时没有更多数据</p>
+    {{/if}}
+    {{each rows v i}}
+    <li>
+      <a href="javascript:;">
+        <img src="{{v.brandLogo}}" alt="">
+        <p>{{v.brandName}}</p>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
   <script src="lib/mui/js/mui.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/zepto/zepto.min.js"></script>
+  <script src="js/category.js"></script>
 </body>
 </html>

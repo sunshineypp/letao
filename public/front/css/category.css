@@ -25,5 +25,19 @@
     height: 100%;
     overflow: hidden;
     position: relative;
-    background-color: mediumpurple;
+}
+.lt_category_r li{
+    width: 33.33%;
+    float: left;
+    text-align: center;
+}
+.lt_category_r li img{
+    width: 62px;
+    height: 62px;
+    display: block;
+    margin: 0 auto;
+}
+.lt_category_r .info{
+    margin-left: 10px;
+    margin-top: 10px;
 }
