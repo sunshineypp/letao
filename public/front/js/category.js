@@ -1,5 +1,5 @@
 //滚动初始化
-mui('.mui-scroll-wrapper').scroll({
+var sc = mui('.mui-scroll-wrapper').scroll({
     indicators: false
 });
 
@@ -35,4 +35,7 @@ $('.lt_category_l .mui-scroll').on('click','li',function () {
     //渲染二级分类，如果没有：显示：暂时没有更多数据
     var id = $(this).data('id');
     getSecondCag(id);
+
+    //让二级分类滚动到顶部
+    sc[0].scroll().scrollTo(0,0,500);//100毫秒滚动到顶
 });
