@@ -1,0 +1,45 @@
+@charset "utf-8";
+/*排序*/
+.lt_sort{
+    height: 30px;
+    line-height: 30px;
+    background-color: #eee;
+    padding: 0 10px;
+}
+.lt_sort a{
+    font-size: 12px;
+    color: #666;
+    width: 25%;
+    text-align: center;
+    float: left;
+}
+
+/*商品*/
+.lt_product{
+    padding: 10px;
+}
+.lt_product .item{
+    width: 48%;
+    padding: 10px;
+    float: left;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+.lt_product .item:nth-child(odd){
+    margin-right: 4%;
+}
+.lt_product .item p{
+    margin-top: 10px;
+    height: 40px;
+}
+.lt_product .price span:first-child{
+ color: red;
+}
+.lt_product .price span:last-child{
+    text-decoration: line-through;
+}
+
+.lt_sort a.now{
+    color: darkorange;
+}
