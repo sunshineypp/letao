@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
   <div class="lt_container">
@@ -27,17 +26,20 @@
       <form class="mui-input-group">
         <div class="mui-input-row">
           <label>用户名</label>
-          <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+          <input type="text" name="username" class="mui-input-clear" placeholder="请输入用户名">
         </div>
         <div class="mui-input-row">
           <label>密码</label>
-          <input type="password" class="mui-input-password" placeholder="请输入密码">
+          <input type="password" name="password" class="mui-input-password" placeholder="请输入密码">
         </div>
         <div class="mui-button-row">
-          <button type="button" class="mui-btn mui-btn-primary" >登录</button>&nbsp;&nbsp;
-          <button type="button" class="mui-btn mui-btn-danger" >重置</button>
+          <button type="button" class="btn_login mui-btn mui-btn-primary" >登录</button>&nbsp;&nbsp;
+          <button type="reset" class="mui-btn mui-btn-danger" >重置</button>
         </div>
       </form>
+      <div class="mui-text-right">
+        <a href="register.html" class="mui-btn mui-btn-link">立即注册</a>
+      </div>
     </div>
 
     <!--底部-->
