@@ -7,6 +7,7 @@ $(function () {
     //现获取id
     var id = tools.getParam('id');
     // console.log(id);
+    //加载数据
     $.ajax({
         type: 'get',
         url: '/product/queryProductDetail',
@@ -35,4 +36,41 @@ $(function () {
             mui(".mui-numbox").numbox();
         }
     });
+
+    //点击尺码，选中
+    $('.mui-scroll').on('click','.size',function () {
+        $(this).addClass('now').siblings().removeClass('now');
+    });
+    
+    //添加到购物车功能
+    $('.btn_add_cart').on('click',function () {
+        // 获取尺码和数量
+        var size = $('.size.now').html();
+        var num = $('.mui-numbox-input').val();
+
+        if(!size){
+            mui.toast('请选择尺码');
+            return;
+        }
+        // console.log(size +" : "+num);
+        $.ajax({
+            type: 'post',
+            url: '/cart/addCart',
+            data: {
+                productId : id,
+                num: num,
+                size: size
+            },
+            success: function (data) {
+                if(data.error === 400){
+                    //未登录，跳转到登录界面。要传递当前地址
+                    location.href = "login.html?retUrl="+location.href;
+                }
+                if(data.success){
+                    mui.toast('添加成功');
+                }
+            }
+        });
+    });
+
 });

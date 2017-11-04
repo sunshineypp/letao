@@ -31,7 +31,6 @@ img{
     background-color: #069;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 999;
 }
 .lt_header .icon_left,
