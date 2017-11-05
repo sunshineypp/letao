@@ -15,7 +15,7 @@ $(function () {
             id: id
         },
         success: function (data) {
-            console.log(data);
+            // console.log(data);
 
             //获取全部尺码
             var size = data.size.split('-');
@@ -72,5 +72,5 @@ $(function () {
             }
         });
     });
-
+    
 });
