@@ -1,7 +1,9 @@
 //滚动初始化
-var sc = mui('.mui-scroll-wrapper').scroll({
+var sc = mui('.mui-scroll-wrapper');
+sc.scroll({
     indicators: false
 });
+console.log(sc);
 
 //左侧初始化，渲染一级分类
 $.ajax({
@@ -36,6 +38,6 @@ $('.lt_category_l .mui-scroll').on('click','li',function () {
     var id = $(this).data('id');
     getSecondCag(id);
 
-    //让二级分类滚动到顶部
-    sc[0].scroll().scrollTo(0,0,500);//100毫秒滚动到顶
+    //让二级分类滚动到顶部r
+    sc[1].scrollTo(0,0,100);//100毫秒滚动到顶
 });
