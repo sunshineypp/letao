@@ -1,0 +1,29 @@
+@charset "utf-8";
+.form{
+    padding: 10px;
+}
+.form .code input{
+    width: 60%;
+}
+.form .code a{
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    width: 35%;
+    font-size: 17px;
+}
+.form .btn_register{
+    height: 40px;
+    line-height: 40px;
+    font-size: 17px;
+    padding: 0;
+}
+.form .register_test{
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+.form .code .disabled{
+    background-color: #999;
+    border-color: #999;
+}
